@@ -12,7 +12,7 @@ The official page for installation is https://spacy.io/usage. This link provides
 
 ## Preparing and Annotating the Data
 
-This repo uses a kaggle dataset to gather food review data, which is the most common contrinution to food dataset. The library used can be found in bellow link: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
+This repo uses a kaggle dataset to gather food review data, which is the most common contribution to food dataset. The library used can be found in bellow link: https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews
 
 From the review.csv, the summery colomn was chosen and the data was filtered for sentences at least 15 words long to insure a good sentence structure. Importing the filtered sentences in a text file, an online tool was used to annotate the data for food dataset and then exported as a json file. The online tool used is: https://tecoholic.github.io/ner-annotator/
 
@@ -26,5 +26,5 @@ A basic code for spaCy was implemented using the code from this repo: https://gi
 
 We use add_pipe method which then concats the food dataset ner and the base model ner. This concated file then predicts the other labels apart from food. Details about this method can be found on this video: https://youtu.be/uJ3jWJnADyA
 
-However another problem occured which lead to the model predicting the non-food labels as food labels. To solve this the tok2vec was replaced with the base models tok2vec. This allows the complete model to accept the new label along with the frozen labels. This repo contains a better look on this method: https://github.com/explosion/projects/tree/v3/tutorials/ner_double
+However another problem occured which lead to the model predicting the non-food labels as food labels. To solve this the tok2vec was replaced with the base model's tok2vec. This allows the complete model to accept the new label along with the frozen labels. This repo contains a better look on this method: https://github.com/explosion/projects/tree/v3/tutorials/ner_double
 
