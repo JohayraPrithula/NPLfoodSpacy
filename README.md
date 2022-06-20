@@ -16,7 +16,11 @@ This repo uses a kaggle dataset to gather food review data, which is the most co
 
 From the review.csv, the summery colomn was chosen and the data was filtered for sentences at least 15 words long to insure a good sentence structure. Importing the filtered sentences in a text file, an online tool was used to annotate the data for food dataset and then exported as a json file. The online tool used is: https://tecoholic.github.io/ner-annotator/
 
-Run the file MakingTheDataset.ipynb to follow the same procedure for any kind of csv data. The final dataset consisted of 324 annotations.
+Run the file 
+
+```python -m notebook MakingTheDataset.ipynb``` 
+
+to follow the same procedure for any kind of csv data. The final dataset consisted of 324 annotations.
 
 ## Implementing spaCy
 
